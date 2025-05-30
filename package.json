@@ -1,0 +1,40 @@
+{
+  "name": "taskos",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "husky install",
+    "test": "echo No tests found.",
+    "format": "prettier --write --ignore-path=.gitignore .",
+    "format:check": "prettier --check --ignore-path=.gitignore ."
+  },
+  "dependencies": {
+    "@types/node": "22.15.29",
+    "@types/react": "19.1.6",
+    "@types/react-dom": "19.1.5",
+    "eslint": "9.28.0",
+    "eslint-config-next": "15.3.3",
+    "framer-motion": "^9.0.0",
+    "next": "15.3.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-hook-form": "^7.0.0",
+    "styled-components": "^5.0.0",
+    "typescript": "5.8.3"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.0.0",
+    "eslint-config-prettier": "^8.0.0",
+    "husky": ">=7",
+    "lint-staged": ">=10",
+    "prettier": "^2.0.0",
+    "react-icons": "^4.8.0"
+  },
+  "lint-staged": {
+    "*": "prettier --write --ignore-unknown"
+  }
+}

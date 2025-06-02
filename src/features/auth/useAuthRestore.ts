@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 import { useAppDispatch } from "@/store/hooks";
 import { decryptData } from "@/utils/encryption";
@@ -24,7 +24,7 @@ export function useAuthRestore() {
             true,
             ["encrypt", "decrypt"],
           );
-          const token = await decryptData(tokenEncrypted, key);
+          const token = await decryptData({ data: tokenEncrypted, key });
 
           dispatch(setAuth({ token, userId: "restored@session.com" }));
         } catch (err) {

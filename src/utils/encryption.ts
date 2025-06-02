@@ -1,5 +1,7 @@
 if (typeof window === "undefined") {
+  // eslint-disable-next-line
   global.TextEncoder = require("util").TextEncoder;
+  // eslint-disable-next-line
   global.TextDecoder = require("util").TextDecoder;
 }
 

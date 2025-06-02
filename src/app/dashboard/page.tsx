@@ -14,11 +14,12 @@ import LogoutButton from "@/features/auth/LogoutButton";
 import TaskBoard from "@/features/tasks/TaskBoard";
 import TaskForm from "@/features/tasks/TaskForm";
 import { useAppSelector } from "@/store/hooks";
+import { RootState } from "@/store/store";
 
 // Dashboard page component
 export default function Dashboard() {
   // Get authentication state from Redux store
-  const { token, restoring } = useAppSelector((state) => state.auth);
+  const { token, restoring } = useAppSelector((state: RootState) => state.auth);
   const router = useRouter();
 
   // Redirect to home page if not authenticated and not restoring
@@ -109,7 +110,7 @@ const CenteredContainer = styled.div`
 
 // Spinner component for loading state
 const Spinner = styled.div.attrs({
-  ...({ "data-testid": "spinner" } as Record<string, any>),
+  ...({ "data-testid": "spinner" } as Record<string, string>),
 })`
   border: 4px solid rgba(255, 255, 255, 0.2);
   border-left-color: #3b82f6;

@@ -1,19 +1,16 @@
 "use client";
 
-import styled from "styled-components";
-import { useAppDispatch, useAppSelector } from "@/store/hooks";
-import { clearTasks } from "./taskSlice";
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
-export default function TaskBoardActions({
-  selectedTaskId,
-  setSelectedTaskId,
-}: {
-  selectedTaskId: string | null;
-  setSelectedTaskId: (id: string | null) => void;
-}) {
+import styled from "styled-components";
+
+import { useAppDispatch, useAppSelector } from "@/store/hooks";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { clearTasks } from "./taskSlice";
+
+export default function TaskBoardActions({}) {
   const dispatch = useAppDispatch();
   const { userId } = useAppSelector((state) => state.auth);
 

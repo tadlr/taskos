@@ -10,17 +10,15 @@ import styled from "styled-components";
 import { useDroppable } from "@dnd-kit/core";
 
 // Import DraggableTask component to render individual draggable tasks
-import DraggableTask from "./DraggableTask";
+import DraggableTask, { Task } from "./DraggableTask";
 
 // Column component represents a single task column (e.g., Pending, In Progress, Completed)
 export default function Column({
   id,
   tasks,
-  onTaskClick,
 }: {
   id: string; // Column identifier (status)
-  tasks: any[]; // Array of tasks for this column
-  onTaskClick: (id: string) => void; // Handler for clicking a task
+  tasks: Task[]; // Array of tasks for this column
 }) {
   // Set up droppable area for drag-and-drop using dnd-kit
   const { setNodeRef } = useDroppable({ id });
@@ -31,8 +29,8 @@ export default function Column({
       {/* Column title */}
       <h3>{id}</h3>
       {/* Render each task as a draggable item */}
-      {tasks.map((task) => (
-        <DraggableTask key={task.id} task={task} onClick={onTaskClick} />
+      {tasks.map((task: Task) => (
+        <DraggableTask key={task.id} task={task} />
       ))}
     </Wrapper>
   );

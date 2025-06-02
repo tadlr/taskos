@@ -1,22 +1,26 @@
 "use client";
 
-import React, { useState, useRef, useLayoutEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useLayoutEffect, useRef, useState } from "react";
+
+import { GripVertical, MoreVertical } from "lucide-react";
+import styled from "styled-components";
+
+import { useAppDispatch } from "@/store/hooks";
+import { useDraggable } from "@dnd-kit/core";
 import { faStar } from "@fortawesome/free-regular-svg-icons";
 import { faStar as faStarFilled } from "@fortawesome/free-solid-svg-icons";
-import { GripVertical, MoreVertical } from "lucide-react";
-import { useDraggable } from "@dnd-kit/core";
-import styled, { css } from "styled-components";
-import { useAppDispatch } from "@/store/hooks";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { deleteTask, editTask, toggleFavorite } from "./taskSlice";
 
-export default function DraggableTask({
-  task,
-  onClick,
-}: {
-  task: any;
-  onClick: (id: string) => void;
-}) {
+export interface Task {
+  id: string;
+  name: string;
+  active: boolean;
+  favorite: boolean;
+}
+
+export default function DraggableTask({ task }: { task: Task }) {
   const dispatch = useAppDispatch();
   const [editing, setEditing] = useState(false);
   const [newName, setNewName] = useState(task.name);
@@ -65,7 +69,6 @@ export default function DraggableTask({
       $isActive={task.active}
       $isDragging={!!transform}
       $size={size}
-      onClick={() => onClick(task.id)}
       style={{
         transform: transform
           ? `translate3d(${transform.x}px, ${transform.y}px, 0)`

@@ -1,9 +1,11 @@
+// @esllint-disable no-console
 import LZString from "lz-string";
 
 import authReducer from "@/features/auth/authSlice";
 import taskReducer from "@/features/tasks/taskSlice";
 import { configureStore } from "@reduxjs/toolkit";
 
+// eslint-disable-next-line
 const saveTasksMiddleware = (storeAPI: any) => (next: any) => (action: any) => {
   const result = next(action);
 

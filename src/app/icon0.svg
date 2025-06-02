@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="260.65" height="203.43"><svg id="SvgjsSvg1065" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 260.65 203.43">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: none;
+        font-family: ProximaNova-Bold, 'Proxima Nova';
+        font-size: 93.7px;
+        font-weight: 700;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        font-family: ArialMT, Arial;
+        font-size: 93px;
+      }
+    </style>
+    <linearGradient id="SvgjsLinearGradient1064" x1="119.21" y1="200" x2="119.21" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#384a9f"></stop>
+      <stop offset="1" stop-color="#54489d"></stop>
+    </linearGradient>
+  </defs>
+  <g id="SvgjsG1063">
+    <g>
+      <rect class="cls-1" x="19.21" width="200" height="200"></rect>
+      <text class="cls-2" transform="translate(1.5 86.23)"><tspan x="0" y="0">task</tspan></text>
+      <text class="cls-3" transform="translate(105.96 173.24)"><tspan x="0" y="0">OS</tspan></text>
+    </g>
+  </g>
+</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: none; } }
+</style></svg>

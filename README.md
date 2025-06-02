@@ -1,46 +1,67 @@
-# taskos
+# taskOS
 
-🎉 Congratulations, your project was successfully generated with [Create Next Stack](https://www.create-next-stack.com/)!
+**taskOS** is a secure, real-time task management system built with Next.js, Redux Toolkit, and styled-components.
 
-To get started, run:
+---
 
-```bash
+## 🚀 Features
+
+- **Secure authentication** with data encryption
+- **Real-time task board** with organized workflow
+- **Responsive UI** built with styled-components
+- **Integration** with `next/navigation` and Lottie animations
+
+---
+
+## Prerequisites
+
+Make sure you have the following installed:
+
+- **Node.js** (v20 or higher recommended)
+- **Yarn** (or npm)
+
+---
+
+## Installation
+
+### Clone the repository
+```
+git clone https://github.com/yourusername/taskos.git
+cd taskos
+```
+
+---
+#### Install dependencies
+```
+yarn install
+```
+
+---
+
+Running the App
+
+### Start the development server
+```
 yarn dev
 ```
 
-## Scripts
+The app will be running at http://localhost:3000.
 
-The table below provides names and descriptions of the npm scripts available in this project.
+---
+### Project Structure
 
-Each script is run using `yarn <script-name>`. For example: `yarn dev`.
+```
+src/
+  ├── app/               # Next.js pages and app logic
+  ├── components/        # Reusable UI components
+  ├── features/          # Redux slices and feature-specific logic
+  ├── store/             # Redux store setup
+  ├── utils/             # Utility functions (e.g., encryption)
+  ├── assets/            # Images and Lottie animations
+  └── styles/            # Global styles
+  ```
 
-| Name           | Description                                                                                                                                                                                                                                     |
-| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `prepare`      | The [`prepare` life cycle script](https://docs.npmjs.com/cli/v7/using-npm/scripts#life-cycle-scripts) is used to set up Git pre-commit hooks when people install dependencies, eg. using `npm install`. This script should not be run manually. |
-| `test`         | Runs tests                                                                                                                                                                                                                                      |
-| `dev`          | Runs the Next.js development server.                                                                                                                                                                                                            |
-| `build`        | Generates a production build.                                                                                                                                                                                                                   |
-| `start`        | Runs the Next.js production server built using `build` script.                                                                                                                                                                                  |
-| `lint`         | Runs [ESLint](https://eslint.org/) to catch linting errors in the source code.                                                                                                                                                                  |
-| `format`       | Formats all source code in the project.                                                                                                                                                                                                         |
-| `format:check` | Checks the formatting of all code in the project.                                                                                                                                                                                               |
-
-## Technologies
-
-The table below gives an overview of the technologies used in this project, as well as places to learn more about them.
-
-| Name              | Links                                                                                                                                                                                                           |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Next.js           | [Website](https://nextjs.org/) - [Docs](https://nextjs.org/docs) - [Learn Next.js](https://nextjs.org/learn) - [GitHub](https://github.com/vercel/next.js) - [Wikipedia](https://en.wikipedia.org/wiki/Next.js) |
-| React             | [Website](https://reactjs.org/) - [Docs](https://reactjs.org/docs/getting-started.html) - [GitHub](https://github.com/facebook/react) - [Wikipedia](<https://en.wikipedia.org/wiki/React_(JavaScript_library)>) |
-| TypeScript        | [Website](https://www.typescriptlang.org/) - [Docs](https://www.typescriptlang.org/docs/) - [GitHub](https://github.com/microsoft/TypeScript) - [Wikipedia](https://en.wikipedia.org/wiki/TypeScript)           |
-| Styled Components | [Website](https://styled-components.com/) - [Docs](https://styled-components.com/docs) - [GitHub](https://github.com/styled-components/styled-components)                                                       |
-| Framer Motion     | [Website](https://www.framer.com/motion/) - [Docs](https://www.framer.com/docs/) - [GitHub](https://github.com/framer/motion)                                                                                   |
-| React Hook Form   | [Website](https://react-hook-form.com/) - [Docs](https://react-hook-form.com/get-started) - [GitHub](https://github.com/react-hook-form/react-hook-form)                                                        |
-| React Icons       | [Website](https://react-icons.github.io/react-icons/) - [GitHub](https://github.com/react-icons/react-icons)                                                                                                    |
-| ESLint            | [Website](https://eslint.org/) - [Configuration](https://eslint.org/docs/user-guide/configuring/) - [Rules](https://eslint.org/docs/rules/) - [GitHub](https://github.com/eslint/eslint)                        |
-| Prettier          | [Website](https://prettier.io/) - [Docs](https://prettier.io/docs/en/index.html) - [Options](https://prettier.io/docs/en/options.html) - [GitHub](https://github.com/prettier/prettier)                         |
-| Husky             | [Website](https://typicode.github.io/husky/) - [Docs](https://typicode.github.io/husky/) - [GitHub](https://github.com/typicode/husky)                                                                          |
-| lint-staged       | [Website](https://github.com/okonet/lint-staged) - [GitHub](https://github.com/okonet/lint-staged)                                                                                                              |
-| Yarn              | [Website](https://yarnpkg.com/) - [CLI Docs](https://yarnpkg.com/cli) - [GitHub](https://github.com/yarnpkg/berry)                                                                                              |
-| GitHub Actions    | [Website](https://github.com/features/actions) - [Docs](https://docs.github.com/en/actions) - [Workflow syntax](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)                |
+---
+### Notes
+	•	The app uses mock APIs (like https://reqres.in/api/login) for authentication and validation.
+	•	Encryption is handled with Web Crypto API to protect sensitive data.

@@ -8,6 +8,7 @@ import Lottie from "lottie-react";
 import { useRouter } from "next/navigation";
 import styled, { keyframes } from "styled-components";
 
+import motionAnimation from "@/assets/animations/motionDesigner.json";
 // Import custom components for the landing page
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -33,7 +34,6 @@ export default function Home() {
       <Header />
 
       <MainContent>
-        {/* Glass effect card with welcome and login */}
         <GlassCard>
           <Title>
             Welcome to <span className="thin">task</span>
@@ -41,7 +41,7 @@ export default function Home() {
           </Title>
           <Subtitle>Secure, real-time task management — reimagined.</Subtitle>
           <LoginSection>
-            <Prompt>Let's get you started:</Prompt>
+            <Prompt>Lets get you started:</Prompt>
             <Login />
           </LoginSection>
         </GlassCard>
@@ -49,7 +49,7 @@ export default function Home() {
         {/* Animated illustration and blurb */}
         <BlurbContainer>
           <Lottie
-            animationData={require("@/assets/animations/motionDesigner.json")}
+            animationData={motionAnimation}
             loop={true}
             autoplay={true}
             style={{ width: "100%", height: "100%" }}

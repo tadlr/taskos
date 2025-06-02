@@ -2,13 +2,16 @@
 
 import React, { ReactNode, useEffect, useState } from "react";
 
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 import { useTaskRestore } from "@/features/tasks/useTaskRestore";
 import { useAppSelector } from "@/store/hooks";
+import { RootState } from "@/store/store";
 
 export default function TaskRestore({ children }: { children: ReactNode }) {
-  const { userId, restoring } = useAppSelector((state) => state.auth);
+  const { userId, restoring } = useAppSelector(
+    (state: RootState) => state.auth,
+  );
   const [delayed, setDelayed] = useState(true);
 
   console.log(userId, restoring, "🚀 TaskRestore");
@@ -31,10 +34,6 @@ export default function TaskRestore({ children }: { children: ReactNode }) {
   return <>{children}</>;
 }
 
-const spin = keyframes`
-  to { transform: rotate(360deg); }
-`;
-
 const CenteredContainer = styled.div`
   background: linear-gradient(135deg, #0f172a, #1e293b);
   min-height: 100vh;
@@ -48,7 +47,7 @@ const CenteredContainer = styled.div`
 `;
 
 const Spinner = styled.div.attrs({
-  ...({ "data-testid": "spinner" } as Record<string, any>),
+  ...({ "data-testid": "spinner" } as Record<string, string>),
 })`
   border: 4px solid rgba(255, 255, 255, 0.2);
   border-left-color: #3b82f6;

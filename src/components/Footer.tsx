@@ -15,6 +15,7 @@ export default function Header({ children }: { children?: ReactNode }) {
       <a href="#">Terms</a>
       {" • "}
       <a href="#">Support</a>
+      {children}
     </Footer>
   );
 }

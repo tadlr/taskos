@@ -2,14 +2,15 @@
 
 import React, { useState } from "react";
 
-import { DndContext, closestCenter, DragEndEvent } from "@dnd-kit/core";
 import styled from "styled-components";
-import TaskBoardActions from "./TaskBoardActions";
+
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { fireConfetti } from "@/utils/confetti";
-import { editTask } from "./taskSlice";
+import { closestCenter, DndContext, DragEndEvent } from "@dnd-kit/core";
 
 import Column from "./Column";
+import TaskBoardActions from "./TaskBoardActions";
+import { editTask } from "./taskSlice";
 
 const columns = ["Pending", "In Progress", "Completed"];
 
@@ -17,7 +18,6 @@ export default function TaskBoard() {
   const dispatch = useAppDispatch();
   const { taskTree } = useAppSelector((state) => state.tasks);
 
-  const [selectedTaskId, setSelectedTaskId] = useState<string | null>(null);
   const [filter, setFilter] = useState("");
 
   const handleDragEnd = (event: DragEndEvent) => {
@@ -51,21 +51,23 @@ export default function TaskBoard() {
             <Column
               key={status}
               id={status}
-              tasks={taskTree.filter(
-                (t) =>
-                  t.status === status &&
-                  t.name.toLowerCase().includes(filter.toLowerCase()),
-              )}
-              onTaskClick={setSelectedTaskId}
+              tasks={taskTree
+                .map((t) => ({
+                  ...t,
+                  active: false,
+                  favorite: t.favorite ?? false,
+                }))
+                .filter(
+                  (t) =>
+                    t.status === status &&
+                    t.name.toLowerCase().includes(filter.toLowerCase()),
+                )}
             />
           ))}
         </DndContext>
       </ColumnsWrapper>
 
-      <TaskBoardActions
-        selectedTaskId={selectedTaskId}
-        setSelectedTaskId={setSelectedTaskId}
-      />
+      <TaskBoardActions />
     </Container>
   );
 }

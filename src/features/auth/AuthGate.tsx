@@ -21,7 +21,7 @@ export default function AuthGate({ children }: { children: React.ReactNode }) {
           true,
           ["encrypt", "decrypt"],
         );
-        const token = await decryptData(tokenEncrypted, key);
+        const token = await decryptData({ data: tokenEncrypted, key });
 
         dispatch(setAuth({ token, userId: "stored@example.com" }));
       }

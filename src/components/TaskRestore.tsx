@@ -1,7 +1,9 @@
 "use client";
 
 import React, { ReactNode, useEffect, useState } from "react";
+
 import styled, { keyframes } from "styled-components";
+
 import { useTaskRestore } from "@/features/tasks/useTaskRestore";
 import { useAppSelector } from "@/store/hooks";
 
@@ -45,13 +47,21 @@ const CenteredContainer = styled.div`
   padding: 2rem;
 `;
 
-const Spinner = styled.div`
+const Spinner = styled.div.attrs({
+  ...({ "data-testid": "spinner" } as Record<string, any>),
+})`
   border: 4px solid rgba(255, 255, 255, 0.2);
   border-left-color: #3b82f6;
   border-radius: 50%;
   width: 48px;
   height: 48px;
-  animation: ${spin} 1s linear infinite;
+  animation: spin 1s linear infinite;
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
 `;
 
 const Message = styled.span`

@@ -1,9 +1,8 @@
 import LZString from "lz-string";
 
+import authReducer from "@/features/auth/authSlice";
+import taskReducer from "@/features/tasks/taskSlice";
 import { configureStore } from "@reduxjs/toolkit";
-
-import authReducer from "../features/auth/authSlice";
-import taskReducer from "../features/tasks/taskSlice";
 
 const saveTasksMiddleware = (storeAPI: any) => (next: any) => (action: any) => {
   const result = next(action);

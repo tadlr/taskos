@@ -1,7 +1,10 @@
 "use client";
-import styled from "styled-components";
 import React, { ReactNode } from "react";
 
+// Import styled-components for styling
+import styled from "styled-components";
+
+// Footer component for displaying copyright and links
 export default function Header({ children }: { children?: ReactNode }) {
   return (
     <Footer>
@@ -16,6 +19,7 @@ export default function Header({ children }: { children?: ReactNode }) {
   );
 }
 
+// Styled component for the footer container and links
 const Footer = styled.footer`
   width: 100%;
   text-align: center;

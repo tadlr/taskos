@@ -4,7 +4,7 @@
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Secure authentication** with data encryption
 - **Real-time task board** with organized workflow

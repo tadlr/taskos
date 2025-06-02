@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 347.37 136.94">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        font-family: ProximaNova-Bold, 'Proxima Nova';
+        font-size: 93.7px;
+        font-weight: 700;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        font-family: ArialMT, Arial;
+        font-size: 93px;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="260.72" y1="119.59" x2="260.72" y2="19.08" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#384a9f"/>
+      <stop offset="1" stop-color="#54489d"/>
+    </linearGradient>
+  </defs>
+  <g id="artwork">
+    <g>
+      <text class="cls-2" transform="translate(0 102.46)"><tspan x="0" y="0">task</tspan></text>
+      <rect class="cls-1" x="179.29" y="19.08" width="162.85" height="100.52"/>
+      <text class="cls-3" transform="translate(192.69 106.57)"><tspan x="0" y="0">OS</tspan></text>
+    </g>
+  </g>
+</svg>
